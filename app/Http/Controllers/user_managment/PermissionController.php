@@ -61,4 +61,36 @@ class PermissionController extends Controller
         }
     }
 
+    public function permEdit($id)
+    {
+        $permission = Permission::find($id);
+        return view('admin.editPermission',compact('permission'));
+    }
+
+    public function permDelete($id)
+    {
+        $delete = Permission::destroy($id);
+        if($delete)
+        {
+            return back()->with('message','Permission Deleted');
+
+        }
+        else{
+            return back()->with('message','Permission Not deleted');
+        }
+    }
+
+    public function permUpdate(Request $request,$id)
+    {
+        $update = Permission::where('id',$id)->update(['name' => $request->name]);
+        if($update)
+        {
+            return redirect()->route('permission_list')->with('message','Permission Updated');
+        }
+        else
+        {
+            return redirect()->route('permission_list')->with('message','Permission not updated');
+        }
+    }
+
 }

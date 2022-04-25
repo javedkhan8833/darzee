@@ -31,8 +31,8 @@
                   <td> {{$permission->created_at}}</td>
                   <td> {{$permission->updated_at}}</td>
                   <td>
-                  <button class="btn btn-outline-primary btn-sm">Edit</button>
-                  <button class="btn btn-outline-danger btn-sm">Delete</button>
+                    <a href="{{route('permission.edit',$permission->id)}}" class="btn btn-outline-primary btn-sm">Edit</a>
+                    <a href="{{route('permission.delete',$permission->id)}}" class="btn btn-outline-danger btn-sm">Delete</a>
                 </td>
                 </tr>
             @endforeach

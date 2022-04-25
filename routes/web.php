@@ -44,6 +44,9 @@ Route::group(['middleware' => ['role:admin']], function () {
         Route::post('/storepermission',[PermissionController::class,'store'])->name('store-permission');
         Route::get('/assignPermission',[PermissionController::class,'assignPermission'])->name('assign-permission');
         Route::post('/savePermission',[PermissionController::class,'savePermission'])->name('save-permission');
+        Route::get('/perm/edit/{id}',[PermissionController::class,'permEdit'])->name('permission.edit');
+        Route::get('/perm/delete/{id}',[PermissionController::class,'permDelete'])->name('permission.delete');
+        Route::post('/perm/update/{id}',[PermissionController::class,'permUpdate'])->name('permission.update');
 });
 // Route::group(['middleware' => ['role:manager']], function () {
 
