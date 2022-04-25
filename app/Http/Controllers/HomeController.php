@@ -67,10 +67,6 @@ class HomeController extends Controller
 
     public function checkuser(Request $request)
     {
-        // $role = Role::find('admin');
-        // echo $role;
-        // die;
-
         $data = $request->validate([
             'email' => 'required:unique',
             'password' => 'required'

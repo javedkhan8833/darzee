@@ -3,8 +3,8 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Permissions</h4>
-        <p class="card-description"> Basic Permission Form </p>
+        <h4 class="card-title">Permissions Form</h4>
+        {{-- <p class="card-description"> Basic Permission Form </p> --}}
         <form action="{{route('store-permission')}}" method="POST" class="forms-sample">
             @csrf
           <div class="form-group">

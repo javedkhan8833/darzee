@@ -5,7 +5,7 @@
       <div class="card-body">
         <h4 class="card-title">Basic form elements</h4>
         <p class="card-description"> Basic form elements </p>
-        <form action="{{route('add-role')}}" method="POST" class="forms-sample">
+        <form action="{{route('save-role')}}" method="POST" class="forms-sample">
             @csrf
           <div class="form-group">
             <label for="exampleInputName1">Name</label>
@@ -47,7 +47,7 @@
             <label for="exampleTextarea1">Textarea</label>
             <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
           </div> --}}
-          <a href="{{route('add-role')}}"><button type="submit" class="btn btn-gradient-primary me-2">Add Role</button></a>
+          <button type="submit" class="btn btn-gradient-primary me-2">Save Role</button>
           <button class="btn btn-light">Cancel</button>
         </form>
       </div>
